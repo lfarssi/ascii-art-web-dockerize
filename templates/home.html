@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../assets/style.css">
+    <title>ASCII Art Web</title>
+</head>
+<body>
+    <h1>ASCII-ART-WEB</h1>
+
+    <form action="/ascii-art" method="post" class="form">
+        <textarea name="data" id="textarea" maxlength="200" cols="40" rows="10" required placeholder="Enter your text here..."></textarea>
+        <div class="checkbox">
+            <input type="radio" name="banner" id="standard" value="standard" checked>
+            <label for="standard">Standard</label>
+            <input type="radio" name="banner" id="shadow" value="shadow">
+            <label for="shadow">Shadow</label>
+            <input type="radio" name="banner" id="thinkertoy" value="thinkertoy">
+            <label for="thinkertoy">Thinkertoy</label>
+        </div>
+        <div class="btn">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    {{if .Res }}
+    <h2 class="res">Result:</h2>
+    <div class="result">
+        <pre>{{.Res}}</pre>
+    </div>
+    <div class="btn2">
+        <a href="/">clear</a>
+    </div>
+    {{end}}
+</body>
+</html>

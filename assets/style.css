@@ -1,0 +1,156 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("./background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+textarea {
+    width: 100%;
+    max-width: 1400px;
+    padding: 10px;
+    background-color: rgba(173, 216, 230, 0.8); 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.checkbox input {
+    margin-right: 10px;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background: rgb(0, 60, 255);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+button:hover {
+    background: rgb(103, 182, 247);
+}
+
+.res {
+    text-align: center;
+    margin-top: 20px;
+    
+
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 600px;
+}
+
+.btn2 {
+    display: flex;
+    justify-content: center;
+    
+}
+
+div a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(5, 43, 255);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+div a:hover {
+    background-color: rgb(74, 202, 253);
+}
+
+@media (max-width: 768px) {
+    body{
+        background-size: cover;
+    }
+    h1 {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    textarea {
+        padding: 8px;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+
+    .result {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    div a {
+        padding: 8px 16px;
+    }
+}
+@media (min-width: 480px) {
+    body{
+        background-size: cover;
+    }
+    h1 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    textarea {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    .form {
+        margin: 10px;
+    }
+
+    .res {
+        font-size: 14px;
+    }
+
+    div a {
+        padding: 6px 12px;
+    }
+}
