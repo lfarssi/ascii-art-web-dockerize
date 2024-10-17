@@ -1,9 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    height:100%;
+    margin: 0;
+}
 body {
     font-family: 'Roboto', sans-serif;
     background-image: url("./background.png");
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #333;
+    width: 100%;
 }
 
 h1 {
@@ -19,9 +29,8 @@ h1 {
 }
 
 textarea {
-    width: 100%;
-    max-width: 1400px;
     padding: 10px;
+    width: 80%;
     background-color: rgba(173, 216, 230, 0.8); 
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -29,14 +38,28 @@ textarea {
     margin-bottom: 10px;
 }
 
-.checkbox {
+.button-group {
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
 }
 
-.checkbox input {
-    margin-right: 10px;
+.button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    transition:  0.6s;
+}
+
+input[type="radio"] {
+    display: none; 
+}
+
+input[type="radio"]:checked + .button {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
 }
 
 .btn {
@@ -66,14 +89,19 @@ button:hover {
 }
 
 .result {
+
+    max-width: 600px;
+    max-height: 300px;
+    overflow-y: auto; 
+    overflow-x: auto; 
+    background-color: rgba(173, 216, 230, 0.8); 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.container {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    max-width: 600px;
 }
-
 .btn2 {
     display: flex;
     justify-content: center;
@@ -87,16 +115,16 @@ div a {
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: 0.6s;
 }
 
 div a:hover {
-    background-color: rgb(74, 202, 253);
+    background-color: rgb(98, 209, 253);
 }
 
 @media (max-width: 768px) {
-    body{
-        background-size: cover;
+    body {
+    background-size: cover;
     }
     h1 {
         font-size: 24px;
@@ -106,7 +134,6 @@ div a:hover {
     textarea {
         padding: 8px;
         font-size: 16px;
-        width: 100%;
     }
 
     button {
@@ -123,10 +150,10 @@ div a:hover {
         padding: 8px 16px;
     }
 }
-@media (min-width: 480px) {
-    body{
+@media (min-width: 200) {
+    body {
         background-size: cover;
-    }
+        }
     h1 {
         font-size: 20px;
         margin-top: 20px;
@@ -134,7 +161,6 @@ div a:hover {
 
     textarea {
         font-size: 14px;
-        width: 100%;
     }
 
     button {

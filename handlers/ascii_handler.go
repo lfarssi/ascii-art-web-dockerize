@@ -33,7 +33,7 @@ func AsciiProcessHandler(w http.ResponseWriter, r *http.Request) {
 		ErrorHandler(w, r, http.StatusBadRequest)
 		return
 	}
-	if len(data.Str) > 200 {
+	if len(data.Str) > 500 {
 		ErrorHandler(w, r, http.StatusBadRequest)
 		return
 	}
